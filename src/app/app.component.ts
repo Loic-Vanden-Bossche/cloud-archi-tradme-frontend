@@ -20,7 +20,7 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.appService.getIsApiAlive().subscribe({
       next: (response) => {
-        this.apiIsAlive = response.isAlive;
+        this.apiIsAlive = response.alive;
         this.responseId = response.responseId;
         this.error = '';
       },
