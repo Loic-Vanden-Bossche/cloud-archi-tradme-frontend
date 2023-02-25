@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="success" *ngIf="apiIsAlive">
+    <p>API responded successfully. API is ready to accept requests.</p>
+    <p>
+      Response ID: {{ responseId }}
+    </p>
+  </div>
+
+  <div class="error" *ngIf="!apiIsAlive">
+    <p>An error occurred while trying to connect to the API. Please try again later.</p>
+    <p>
+      Error message: {{ error }}
+    </p>
+  </div>
+</div>
